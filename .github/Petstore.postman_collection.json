@@ -211,7 +211,7 @@
 									"variable": [
 										{
 											"key": "petId",
-											"value": "1",
+											"value": "99101",
 											"description": "(Required) ID of pet to return"
 										}
 									]
