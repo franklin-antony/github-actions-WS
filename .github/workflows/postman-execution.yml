@@ -1,4 +1,4 @@
-name: Testing Postman Collection
+name: Testing Postman Collection with Newman
 on: [push]
 jobs:
   test-api:
