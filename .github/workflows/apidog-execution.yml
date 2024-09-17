@@ -19,3 +19,8 @@ jobs:
       - name: Install Apidog CLI
         run: |
           npm install -g apidog-cli
+
+      # Run the apidog CLI collection
+      - name: Run the apidog CLI collection
+        run: |
+          apidog run API-Test-SC-01.apidog-cli.json --insecure
