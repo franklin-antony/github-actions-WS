@@ -23,4 +23,4 @@ jobs:
       # Run the apidog CLI collection
       - name: Run the apidog CLI collection
         run: |
-          apidog run API-Test-SC-01.apidog-cli.json --insecure
+          apidog run .github/API-Test-SC-01.apidog-cli.json --insecure
