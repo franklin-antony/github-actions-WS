@@ -1,0 +1,337 @@
+{
+  "apidogCli": "1.1.0",
+  "item": [
+    {
+      "item": [
+        {
+          "id": "7be26ba7-5419-404f-aa23-abdfc09d1fe2",
+          "name": "Find pet by ID(Find pet by ID)",
+          "request": {
+            "url": {
+              "protocol": "https",
+              "path": [
+                "v2",
+                "pet",
+                "99101"
+              ],
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "User-Agent",
+                "value": "Apidog/1.0.0 (https://apidog.com)"
+              }
+            ],
+            "method": "GET",
+            "baseUrl": "https://petstore.swagger.io/v2",
+            "body": {},
+            "type": "http"
+          },
+          "response": [],
+          "event": [],
+          "responseDefinition": {
+            "id": 12085444,
+            "name": "successful operation",
+            "code": 200,
+            "contentType": "json",
+            "jsonSchema": {
+              "$ref": "#/definitions/3339918"
+            },
+            "defaultEnable": true,
+            "ordering": 0,
+            "description": "",
+            "mediaType": "",
+            "headers": [],
+            "responseExamples": [],
+            "schemaDefinitions": {
+              "3339917": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "integer",
+                    "format": "int64"
+                  },
+                  "name": {
+                    "type": "string"
+                  }
+                },
+                "xml": {
+                  "name": "Category"
+                },
+                "x-apidog-orders": [
+                  "id",
+                  "name"
+                ],
+                "title": "Category",
+                "name": "Category"
+              },
+              "3339918": {
+                "type": "object",
+                "required": [
+                  "name",
+                  "photoUrls"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "integer",
+                    "format": "int64"
+                  },
+                  "category": {
+                    "$ref": "#/definitions/3339917"
+                  },
+                  "name": {
+                    "type": "string",
+                    "examples": [
+                      "doggie"
+                    ]
+                  },
+                  "photoUrls": {
+                    "type": "array",
+                    "xml": {
+                      "wrapped": true
+                    },
+                    "items": {
+                      "type": "string",
+                      "xml": {
+                        "name": "photoUrl"
+                      }
+                    }
+                  },
+                  "tags": {
+                    "type": "array",
+                    "xml": {
+                      "wrapped": true
+                    },
+                    "items": {
+                      "$ref": "#/definitions/3339919"
+                    }
+                  },
+                  "status": {
+                    "type": "string",
+                    "description": "pet status in the store",
+                    "enum": [
+                      "available",
+                      "pending",
+                      "sold"
+                    ]
+                  }
+                },
+                "xml": {
+                  "name": "Pet"
+                },
+                "x-apidog-orders": [
+                  "id",
+                  "category",
+                  "name",
+                  "photoUrls",
+                  "tags",
+                  "status"
+                ],
+                "title": "Pet",
+                "name": "Pet"
+              },
+              "3339919": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "integer",
+                    "format": "int64"
+                  },
+                  "name": {
+                    "type": "string"
+                  }
+                },
+                "xml": {
+                  "name": "Tag"
+                },
+                "x-apidog-orders": [
+                  "id",
+                  "name"
+                ],
+                "title": "Tag",
+                "name": "Tag"
+              }
+            }
+          },
+          "requestDefinition": {
+            "jsonSchema": {}
+          },
+          "metaInfo": {
+            "httpApiId": 10140429,
+            "httpApiCaseId": 13710198,
+            "httpApiName": "Find pet by ID",
+            "httpApiPath": "/pet/{petId}",
+            "httpApiMethod": "get",
+            "httpApiCaseName": "Find pet by ID",
+            "id": "79ec924a-acca-41eb-ad16-920b4323fb58",
+            "type": "http"
+          },
+          "type": "http",
+          "protocolProfileBehavior": {
+            "useWhatWGUrlParser": false,
+            "disableUrlEncoding": false
+          }
+        }
+      ],
+      "name": "API-Test-SC-01"
+    }
+  ],
+  "info": {
+    "name": "API-Test-SC-01"
+  },
+  "dataSchemas": {
+    "3339917": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "xml": {
+        "name": "Category"
+      },
+      "x-apidog-orders": [
+        "id",
+        "name"
+      ],
+      "title": "Category",
+      "name": "Category"
+    },
+    "3339918": {
+      "type": "object",
+      "required": [
+        "name",
+        "photoUrls"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "category": {
+          "$ref": "#/definitions/3339917"
+        },
+        "name": {
+          "type": "string",
+          "examples": [
+            "doggie"
+          ]
+        },
+        "photoUrls": {
+          "type": "array",
+          "xml": {
+            "wrapped": true
+          },
+          "items": {
+            "type": "string",
+            "xml": {
+              "name": "photoUrl"
+            }
+          }
+        },
+        "tags": {
+          "type": "array",
+          "xml": {
+            "wrapped": true
+          },
+          "items": {
+            "$ref": "#/definitions/3339919"
+          }
+        },
+        "status": {
+          "type": "string",
+          "description": "pet status in the store",
+          "enum": [
+            "available",
+            "pending",
+            "sold"
+          ]
+        }
+      },
+      "xml": {
+        "name": "Pet"
+      },
+      "x-apidog-orders": [
+        "id",
+        "category",
+        "name",
+        "photoUrls",
+        "tags",
+        "status"
+      ],
+      "title": "Pet",
+      "name": "Pet"
+    },
+    "3339919": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "xml": {
+        "name": "Tag"
+      },
+      "x-apidog-orders": [
+        "id",
+        "name"
+      ],
+      "title": "Tag",
+      "name": "Tag"
+    }
+  },
+  "mockRules": {
+    "rules": [],
+    "enableSystemRule": true
+  },
+  "environment": {
+    "id": 2121239,
+    "name": "PetStore-Cloud",
+    "baseUrl": "https://petstore.swagger.io/v2",
+    "baseUrls": {
+      "default": "https://petstore.swagger.io/v2"
+    },
+    "variable": {
+      "id": "6a6321a2-cb49-451c-b45a-00d623ece86b",
+      "name": "PetStore-Cloud",
+      "values": []
+    },
+    "type": "normal",
+    "parameter": {
+      "header": [],
+      "query": [],
+      "body": [],
+      "cookie": []
+    }
+  },
+  "globals": {
+    "baseUrl": "",
+    "baseUrls": {},
+    "variable": {
+      "id": "f3110a05-fbca-4731-adef-29aa49133722",
+      "values": []
+    },
+    "parameter": {
+      "header": [],
+      "query": [],
+      "body": [],
+      "cookie": []
+    }
+  },
+  "isServerBuild": false,
+  "isTestFlowControl": false
+}
